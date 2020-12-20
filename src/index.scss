@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+
+.starting-screen {
+  position: relative;
+}
+.message-1 {
+  position: absolute;
+  margin-left: 50%;
+  top: -4rem;
+  transform: translateX(-50%);
+  background: rgb(211, 55, 55);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+  font-size: 1.4rem;
+}
+
+.intro-container {
+  height: 50vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+}
+.start {
+  display: grid;
+  height: 50vh;
+  width: 100vw;
+  place-items: center;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.year {
+  font-size: 2rem;
+  margin-top: -2rem;
+  margin-bottom: -2.5rem;
+}
+.nba-logo {
+  height: 15rem;
+  background: url('./images/logo/nba-logo.png') no-repeat center center/cover;
+  width: 20rem;
+  padding-bottom: 0 1rem 1rem 0;
+}
+.part-3 {
+  font-size: 2rem;
+  margin-top: -2.5rem;
+}
+.enter-name {
+  font-size: 2rem;
+  padding: 1rem 0.2rem;
+  background: #333;
+  border: none;
+  border-bottom: 2px solid rgb(64, 47, 255);
+  color: #fff;
+}
+.enter-name:focus {
+  outline: none;
+}
+.start-btn {
+  font-size: 2rem;
+  width: 21.5rem;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(44, 107, 202);
+  border: none;
+  border-radius: 5px;
+}
+.start-btn:focus {
+  outline: none;
+}
+.start-btn:hover {
+  transition: all 0.2s ease;
+  background: rgb(30, 182, 88);
+}
