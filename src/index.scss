@@ -9,6 +9,10 @@ body {
 .starting-screen {
   position: relative;
 }
+.starting-screen.clear {
+  animation: clear 1s forwards;
+}
+
 .message-1 {
   position: absolute;
   margin-left: 50%;
@@ -76,4 +80,406 @@ body {
 .start-btn:hover {
   transition: all 0.2s ease;
   background: rgb(30, 182, 88);
+}
+
+.wc-container {
+  display: none;
+  opacity: 0;
+  position: relative;
+}
+
+.wc-container.show {
+  display: grid;
+  place-items: center;
+  animation: show 1s forwards;
+}
+.wc-container.show.clear {
+  animation: clear 1s forwards;
+}
+
+.line {
+  top: 13rem;
+  width: 90%;
+  height: 1px;
+  background: rgb(211, 55, 55);
+  position: absolute;
+}
+
+.background-change {
+  background: rgb(228, 62, 62);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 14rem;
+  z-index: -1;
+}
+
+.wc-top {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.wc-logo {
+  background: url('https://content.sportslogos.net/logos/6/1001/full/2996.gif')
+    no-repeat center center/cover;
+  width: 7rem;
+  height: 7.5rem;
+}
+
+.lower-section {
+  transform: scale(1.2);
+  margin-top: 2rem;
+}
+
+.wc-teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: rgb(211, 168, 168);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  border: 15px solid white;
+}
+.wc-teams:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+
+.wc-team {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 3.5rem;
+  transition: 0.1s all ease;
+  border: #fff 2.5px solid;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.wc-team.grow {
+  transition: 0.2s all ease;
+  transform: scale(1.1);
+  border-color: rgb(211, 55, 55);
+}
+
+.spurs {
+  background: url('http://loodibee.com/wp-content/uploads/nba-san-antonio-spurs-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.spurs.clear {
+  animation: clear-team 0.5s forwards;
+}
+.clippers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-la-clippers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.clippers.clear {
+  animation: clear-team 0.5s forwards;
+}
+.suns {
+  background: url('http://loodibee.com/wp-content/uploads/nba-phoenix-suns-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.suns.clear {
+  animation: clear-team 0.5s forwards;
+}
+.timberwolves {
+  background: url('http://loodibee.com/wp-content/uploads/nba-minnesota-timberwolves-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.timberwolves.clear {
+  animation: clear-team 0.5s forwards;
+}
+.blazers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-portland-trail-blazers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.blazers.clear {
+  animation: clear-team 0.5s forwards;
+}
+.thunder {
+  background: url('http://loodibee.com/wp-content/uploads/nba-oklahoma-city-thunder-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.thunder.clear {
+  animation: clear-team 0.5s forwards;
+}
+.kings {
+  background: url('http://loodibee.com/wp-content/uploads/nba-sacramento-kings-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.kings.clear {
+  animation: clear-team 0.5s forwards;
+}
+.nuggets {
+  background: url('http://loodibee.com/wp-content/uploads/nba-denver-nuggets-logo-2018-480x480.png')
+    no-repeat center center/cover;
+}
+.nuggets.clear {
+  animation: clear-team 0.5s forwards;
+}
+
+.mavericks {
+  background: url('http://loodibee.com/wp-content/uploads/nba-dallas-mavericks-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.mavericks.clear {
+  animation: clear-team 0.5s forwards;
+}
+.rockets {
+  background: url('http://loodibee.com/wp-content/uploads/nba-houston-rockets-logo-2020-300x300.png')
+    no-repeat center center/cover;
+}
+.rockets.clear {
+  animation: clear-team 0.5s forwards;
+}
+.worriors {
+  background: url('http://loodibee.com/wp-content/uploads/nba-golden-state-warriors-logo-2020-480x480.png')
+    no-repeat center center/cover;
+}
+.worriors.clear {
+  animation: clear-team 0.5s forwards;
+}
+.pelicans {
+  background: url('http://loodibee.com/wp-content/uploads/nba-new-orleans-pelicans-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.pelicans.clear {
+  animation: clear-team 0.5s forwards;
+}
+.grizzlies {
+  background: url('http://loodibee.com/wp-content/uploads/nba-memphis-grizzlies-logo-480x480.png')
+    no-repeat center center/cover;
+  color: transparent;
+}
+.grizzlies.clear {
+  animation: clear-team 0.5s forwards;
+}
+.jazz {
+  background: url('http://loodibee.com/wp-content/uploads/nba-utah-jazz-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.jazz.clear {
+  animation: clear-team 0.5s forwards;
+}
+.lakers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-los-angeles-lakers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.lakers.clear {
+  animation: clear-team 0.5s forwards;
+}
+
+.east-btn {
+  font-size: 2rem;
+  width: 21.5rem;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(44, 107, 202);
+  border: none;
+  border-radius: 5px;
+  margin-top: 5rem;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+
+.east-btn.show {
+  animation: show 1s forwards;
+}
+
+.east-btn:hover {
+  transition: all 0.2s ease;
+  background: rgb(49, 39, 189);
+}
+
+.east-btn:focus {
+  outline: none;
+}
+
+.ec-container {
+  display: none;
+  opacity: 0;
+  position: relative;
+}
+
+.ec-container.show {
+  display: grid;
+  place-items: center;
+  animation: show 1s forwards;
+}
+.ec-container.show.clear {
+  animation: clear 1s forwards;
+}
+
+.line-2 {
+  top: 13rem;
+  width: 90%;
+  height: 1px;
+  background: rgb(44, 107, 202);
+  position: absolute;
+}
+
+.background-change-2 {
+  background: rgb(44, 107, 202);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 14rem;
+  z-index: -1;
+}
+
+.ec-logo {
+  width: 9rem;
+  height: 9rem;
+  background: url('http://loodibee.com/wp-content/uploads/nba-Eastern_Conference_logo.png')
+    no-repeat center center/cover;
+}
+
+.pick-num {
+  margin-top: -0.2rem;
+}
+.pick-num-2 {
+  margin-top: -0.2rem;
+}
+
+.lower-section-2 {
+  transform: scale(1.2);
+  margin-top: 2.2rem;
+}
+
+.review-btn {
+  font-size: 2rem;
+  width: 21.5rem;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5rem;
+  opacity: 0;
+  transition: 0.2s all ease;
+}
+
+.review-btn.show {
+  animation: show 1s forwards;
+}
+
+.review-btn:hover {
+  transition: all 0.2s ease;
+  color: #fff;
+  background: rgb(30, 182, 88);
+}
+
+.review-btn:focus {
+  outline: none;
+}
+
+@keyframes clear {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    // display: none;
+  }
+}
+
+.ec-teams {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  padding: 1rem;
+  margin-top: 2rem;
+  background: rgb(120, 178, 233);
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.5s;
+  will-change: transform;
+  border: 15px solid white;
+}
+
+.ec-team {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  height: 3.5rem;
+  transition: 0.1s all ease;
+  border: #fff 2.5px solid;
+  border-radius: 50%;
+  color: transparent;
+}
+
+.ec-team.grow {
+  transition: 0.2s all ease;
+  transform: scale(1.1);
+  border-color: rgb(44, 107, 202);
+}
+
+.review-container {
+  // display: none;
+  opacity: 0;
+}
+
+.review-container.show {
+  animation: show 1s forwards;
+}
+.review-container.show.clear {
+  animation: clear 1s forwards;
+}
+
+@keyframes clear-team {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    visibility: hidden;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .wc-top {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wc-teams {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ec-teams {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .background-change {
+    height: 120vh;
+  }
+
+  .lower-section {
+    transform: scale(1);
+  }
+  .lower-section-2 {
+    transform: scale(1);
+  }
 }

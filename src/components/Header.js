@@ -1,5 +1,6 @@
 // import { Spring } from 'react-spring';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { Context } from './context/Context';
 import { useSpring, animated } from 'react-spring';
 
 const calc = (x, y) => [
@@ -11,6 +12,8 @@ const trans = (x, y, s) =>
   `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
 export const Header = () => {
+  let globalContext = useContext(Context);
+
   // NAME STATE
   const [name, setName] = useState('');
   // START BUTTON ANIMATION
@@ -46,8 +49,15 @@ export const Header = () => {
   const startNext = () => {
     if (name !== '') {
       setTimeout(() => {
-        document.getElementById('starting-screen').style.display = 'none';
+        document.getElementById('starting-screen').classList.add('clear');
       }, 1000);
+      setTimeout(() => {
+        document.getElementById('wc-container').classList.add('show');
+        document.getElementById('starting-screen').style.display = 'none';
+      }, 2000);
+      // globalContext.setUserName(name);
+      globalContext.userName = name;
+      console.log(globalContext);
     } else {
       setMessage1({ top: '-0.5rem' });
       setTimeout(() => {
@@ -73,15 +83,13 @@ export const Header = () => {
             }
             onMouseLeave={() => set({ xys: [0, 0, 1] })}
             style={{ transform: props.xys.interpolate(trans) }}
-          >
-            <div />
-          </animated.div>
+          ></animated.div>
           <div className='part-3 intro-item'>
             <h1>Predictions</h1>
           </div>
         </div>
         <div className='start'>
-          <div></div>
+          <div className='empty'></div>
           <input
             type='text'
             placeholder='Enter Name'
@@ -118,8 +126,8 @@ export const Header = () => {
 };
 export default Header;
 
-// INTRO ANIMATIONS
-// ENTER NAME AND START
-// CHOOSE 8 SEED NEXT CHOOSE 7 ECT.
-// USE CONTEXT FOR GLOBAL STATE
-// DRAGGABLE LIST AT END TO EDIT
+//  START BUTTON DOESNT SHOW ON MOBILE VP UNLESS SCROLL OR INPUT SELEECT
+
+// TRY DRAGGABLE LIST AT END TO EDIT
+
+// HOW DID YOU DEPLOY BLOG?????
