@@ -180,8 +180,8 @@ export const PickWC = () => {
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='worriors wc-team'
-              id='worriors wc-team'
+              className='warriors wc-team'
+              id='warriors wc-team'
             >
               worrior
             </div>{' '}

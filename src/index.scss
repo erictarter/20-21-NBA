@@ -240,11 +240,11 @@ body {
 .rockets.clear {
   animation: clear-team 0.5s forwards;
 }
-.worriors {
+.warriors {
   background: url('http://loodibee.com/wp-content/uploads/nba-golden-state-warriors-logo-2020-480x480.png')
     no-repeat center center/cover;
 }
-.worriors.clear {
+.warriors.clear {
   animation: clear-team 0.5s forwards;
 }
 .pelicans {
@@ -355,6 +355,114 @@ body {
   margin-top: 2.2rem;
 }
 
+.bucks {
+  background: url('http://loodibee.com/wp-content/uploads/nba-milwaukee-bucks-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.bucks.clear {
+  animation: clear-team 0.5s forwards;
+}
+.pacers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-indiana-pacers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.pacers.clear {
+  animation: clear-team 0.5s forwards;
+}
+.celtics {
+  background: url('http://loodibee.com/wp-content/uploads/nba-boston-celtics-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.celtics.clear {
+  animation: clear-team 0.5s forwards;
+}
+.wizards {
+  background: url('http://loodibee.com/wp-content/uploads/nba-washington-wizards-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.wizards.clear {
+  animation: clear-team 0.5s forwards;
+}
+.hornets {
+  background: url('http://loodibee.com/wp-content/uploads/nba-charlotte-hornets-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.hornets.clear {
+  animation: clear-team 0.5s forwards;
+}
+.heat {
+  background: url('http://loodibee.com/wp-content/uploads/nba-miami-heat-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.heat.clear {
+  animation: clear-team 0.5s forwards;
+}
+.raptors {
+  background: url('http://loodibee.com/wp-content/uploads/nba-toronto-raptors-logo-2020-480x480.png')
+    no-repeat center center/cover;
+}
+.raptors.clear {
+  animation: clear-team 0.5s forwards;
+}
+.magic {
+  background: url('http://loodibee.com/wp-content/uploads/nba-orlando-magic-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.magic.caviliers {
+  animation: clear-team 0.5s forwards;
+}
+
+.caviliers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-cleveland-cavaliers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.caviliers.clear {
+  animation: clear-team 0.5s forwards;
+}
+.pistons {
+  background: url('http://loodibee.com/wp-content/uploads/nba-detroit-pistons-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.pistons.clear {
+  animation: clear-team 0.5s forwards;
+}
+.hawks {
+  background: url('http://loodibee.com/wp-content/uploads/nba-atlanta-hawks-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.hawks.clear {
+  animation: clear-team 0.5s forwards;
+}
+.knicks {
+  background: url('http://loodibee.com/wp-content/uploads/nba-new-york-knicks-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.knicks.clear {
+  animation: clear-team 0.5s forwards;
+}
+.bulls {
+  background: url('http://loodibee.com/wp-content/uploads/nba-chicago-bulls-logo-480x480.png')
+    no-repeat center center/cover;
+  color: transparent;
+}
+.bulls.clear {
+  animation: clear-team 0.5s forwards;
+}
+.sixers {
+  background: url('http://loodibee.com/wp-content/uploads/nba-philadelphia-76ers-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.sixers.clear {
+  animation: clear-team 0.5s forwards;
+}
+.nets {
+  background: url('http://loodibee.com/wp-content/uploads/nba-brooklyn-nets-logo-480x480.png')
+    no-repeat center center/cover;
+}
+.nets.clear {
+  animation: clear-team 0.5s forwards;
+}
+
 .review-btn {
   font-size: 2rem;
   width: 21.5rem;
@@ -428,15 +536,98 @@ body {
 }
 
 .review-container {
-  // display: none;
+  display: none;
   opacity: 0;
+  position: relative;
+}
+
+.picks-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 90%;
+  position: relative;
 }
 
 .review-container.show {
   animation: show 1s forwards;
+  display: grid;
+  place-items: center;
 }
 .review-container.show.clear {
   animation: clear 1s forwards;
+}
+
+.top-review {
+  font-size: 1.2rem;
+}
+.direction {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.wc-review {
+  background: rgb(211, 55, 55);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem;
+  grid-gap: 1rem;
+  place-items: center;
+}
+.ec-review {
+  background: rgb(44, 107, 202);
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem;
+  grid-gap: 1rem;
+  place-items: center;
+}
+
+.review-team {
+  font-size: 1.4rem;
+  border: 2px solid #fff;
+  padding: 0.2rem 0.4rem;
+  width: 10rem;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.seed-num {
+  font-size: 1.4rem;
+  padding: 0.835rem 0 0.835rem 0;
+}
+
+.seeds {
+  position: absolute;
+  background: rgb(60, 172, 151);
+  padding: 1rem 0.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  top: 6.5%;
+  border-radius: 5px;
+}
+
+.seeds-2 {
+  display: none;
+}
+.seeds-3 {
+  display: none;
+}
+
+.submit-btn {
+  font-size: 2rem;
+  width: 21.5rem;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(30, 182, 88);
+  border: none;
+  border-radius: 5px;
+  margin-top: 2rem;
+}
+
+.submit-btn:focus {
+  outline: none;
 }
 
 @keyframes clear-team {
@@ -455,6 +646,23 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  .review-team {
+    font-size: 1.2rem;
+  }
+  .seed-num {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 800px) {
+  .review-team {
+    font-size: 1rem;
+  }
+  .seed-num {
+    font-size: 1rem;
   }
 }
 
@@ -481,5 +689,33 @@ body {
   }
   .lower-section-2 {
     transform: scale(1);
+  }
+
+  .picks-container {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .seeds {
+    display: none;
+  }
+
+  .seeds-2 {
+    position: absolute;
+    display: block;
+    padding: 1rem 0.5rem;
+    left: 14.5%;
+    text-align: center;
+    top: 3.5%;
+    border-radius: 5px;
+  }
+  .seeds-3 {
+    position: absolute;
+    display: block;
+    padding: 1rem 0.5rem;
+    left: 14.5%;
+    text-align: center;
+    top: 54.4%;
+    border-radius: 5px;
   }
 }

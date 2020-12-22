@@ -6,6 +6,8 @@ const ContextProvider = ({ children }) => {
   const [userName, setUserName] = useState('');
   const [westPicks, setWestPicks] = useState([]);
   const [eastPicks, setEastPicks] = useState([]);
+  const [westPicksFill, setWestPicksFill] = useState([]);
+  const [eastPicksFill, setEastPicksFill] = useState([]);
 
   const value = {
     userName,
@@ -13,7 +15,11 @@ const ContextProvider = ({ children }) => {
     westPicks,
     setWestPicks,
     eastPicks,
-    setEastPicks
+    setEastPicks,
+    westPicksFill,
+    setWestPicksFill,
+    eastPicksFill,
+    setEastPicksFill
   };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;

@@ -42,7 +42,6 @@ export const PickEC = () => {
         document.querySelector('.review-btn').classList.add('show');
         document.getElementById('pick-num-2').innerText = `Review Predictions`;
         globalContext.eastPicks = ecTeams;
-        console.log(globalContext);
       }
     }
   };
@@ -55,6 +54,43 @@ export const PickEC = () => {
       document.getElementById('review-container').classList.add('show');
       document.getElementById('ec-container').style.display = 'none';
     }, 2000);
+    setTimeout(() => {
+      globalContext.eastPicksFill.map((i, index) => {
+        i.classList.remove('clear');
+        document.getElementById('ec-review').innerHTML += `
+        <div class='review-team'>${globalContext.eastPicks[
+          7 - index
+        ].toUpperCase()}</div> 
+        `;
+      });
+      globalContext.westPicksFill.map((i, index) => {
+        i.classList.remove('clear');
+        document.getElementById('wc-review').innerHTML += `
+        <div class='review-team'>${globalContext.westPicks[
+          7 - index
+        ].toUpperCase()}</div> 
+        `;
+      });
+    }, 2100);
+
+    let eastFill = [];
+    globalContext.eastPicks.map(i => {
+      document.querySelectorAll('.ec-team').forEach(team => {
+        if (team.classList.contains(i)) {
+          eastFill.push(team);
+        }
+      });
+    });
+    let westFill = [];
+    globalContext.westPicks.map(i => {
+      document.querySelectorAll('.wc-team').forEach(team => {
+        if (team.classList.contains(i)) {
+          westFill.push(team);
+        }
+      });
+    });
+    globalContext.westPicksFill = westFill;
+    globalContext.eastPicksFill = eastFill;
   };
 
   const growLogo = e => {
@@ -92,136 +128,136 @@ export const PickEC = () => {
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='spurs wc-team'
-              id='spurs wc-team'
+              className='bucks ec-team'
+              id='bucks ec-team'
             >
-              spurs
+              bucks
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='clippers wc-team'
-              id='clippers wc-team'
+              className='pacers ec-team'
+              id='pacers ec-team'
             >
-              clipper
+              pacers
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='suns wc-team'
-              id='suns wc-team'
+              className='celtics ec-team'
+              id='celtics ec-team'
             >
-              suns
+              celtics
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='timberwolves wc-team'
-              id='timberwolves wc-team'
+              className='wizards ec-team'
+              id='wizards ec-team'
             >
-              timber
+              wizards
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='blazers wc-team'
-              id='blazers wc-team'
+              className='hornets ec-team'
+              id='hornets ec-team'
             >
-              blazers
+              hornets
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='thunder wc-team'
-              id='thunder wc-team'
+              className='heat ec-team'
+              id='heat ec-team'
             >
-              thunder
+              heat
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='kings wc-team'
-              id='kings wc-team'
+              className='raptors ec-team'
+              id='raptors ec-team'
             >
-              kings
+              raptors
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='nuggets wc-team'
-              id='nuggets wc-team'
+              className='magic ec-team'
+              id='magic ec-team'
             >
-              nuggets
+              magic
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='mavericks wc-team'
-              id='mavericks wc-team'
+              className='caviliers ec-team'
+              id='caviliers ec-team'
             >
-              maverik
+              cavili
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='rockets wc-team'
-              id='rockets wc-team'
+              className='pistons ec-team'
+              id='pistons ec-team'
             >
-              rockets
-            </div>
-            <div
-              onMouseOver={growLogo}
-              onMouseLeave={shrinkLogo}
-              onClick={addWcTeam}
-              className='worriors wc-team'
-              id='worriors wc-team'
-            >
-              worrior
+              pistons
             </div>{' '}
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='pelicans wc-team'
-              id='pelicans wc-team'
+              className='hawks ec-team'
+              id='hawks ec-team'
             >
-              pelican
+              hawks
             </div>
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='grizzlies wc-team'
-              id='grizzlies wc-team'
+              className='knicks ec-team'
+              id='knicks ec-team'
             >
-              Grizzli
+              knicks
             </div>{' '}
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='jazz wc-team'
-              id='jazz wc-team'
+              className='bulls ec-team'
+              id='bulls ec-team'
             >
-              Jazz
+              bulls
             </div>{' '}
             <div
               onMouseOver={growLogo}
               onMouseLeave={shrinkLogo}
               onClick={addWcTeam}
-              className='lakers wc-team'
-              id='lakers wc-team'
+              className='sixers ec-team'
+              id='sixers ec-team'
             >
-              Lakers
+              Sixers
+            </div>
+            <div
+              onMouseOver={growLogo}
+              onMouseLeave={shrinkLogo}
+              onClick={addWcTeam}
+              className='nets ec-team'
+              id='nets ec-team'
+            >
+              Nets
             </div>
           </animated.div>
         </div>
@@ -252,3 +288,5 @@ export const PickEC = () => {
   );
 };
 export default PickEC;
+
+// BORDERS STILL RED
