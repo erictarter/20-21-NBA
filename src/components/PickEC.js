@@ -36,7 +36,7 @@ export const PickEC = () => {
         ecTeams.length} Seed`;
       e.target.classList.add('clear');
       setTimeout(() => {
-        e.target.style.display = 'none';
+        // e.target.style.display = 'none';
       }, 500);
       if (ecTeams.length === 8) {
         document.querySelector('.review-btn').classList.add('show');
@@ -60,7 +60,7 @@ export const PickEC = () => {
         document.getElementById('ec-review').innerHTML += `
         <div class='review-team'>${globalContext.eastPicks[
           7 - index
-        ].toUpperCase()}</div> 
+        ].toUpperCase()}</div>
         `;
       });
       globalContext.westPicksFill.map((i, index) => {
@@ -68,7 +68,7 @@ export const PickEC = () => {
         document.getElementById('wc-review').innerHTML += `
         <div class='review-team'>${globalContext.westPicks[
           7 - index
-        ].toUpperCase()}</div> 
+        ].toUpperCase()}</div>
         `;
       });
     }, 2100);

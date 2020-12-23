@@ -35,6 +35,7 @@ export const PickWC = () => {
       document.getElementById('pick-num').innerText = `Pick #${8 -
         wcTeams.length} Seed`;
       e.target.classList.add('clear');
+
       setTimeout(() => {
         e.target.style.display = 'none';
       }, 500);

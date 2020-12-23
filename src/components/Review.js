@@ -1,6 +1,25 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { Context } from './context/Context';
-import { useSpring, animated } from 'react-spring';
+import { useSprings, useSpring, animated, interpolate } from 'react-spring';
+import SpringList from 'react-spring-dnd';
+import EditWest from './EditWest';
+
+const fn = (order, down, originalIndex, curIndex, y) => index =>
+  down && index === originalIndex
+    ? {
+        y: curIndex * 100 + y,
+        scale: 1.1,
+        zIndex: '1',
+        shadow: 15,
+        immediate: n => n === 'y' || n === 'zIndex'
+      }
+    : {
+        y: order.indexOf(index) * 100,
+        scale: 1,
+        zIndex: '0',
+        shadow: 1,
+        immediate: false
+      };
 
 export const Review = () => {
   const globalContext = useContext(Context);
@@ -11,6 +30,8 @@ export const Review = () => {
     x: state ? 1 : 0,
     config: { duration: 1000 }
   });
+
+  const editPicks = () => {};
 
   const submit = e => {
     e.preventDefault();
@@ -24,12 +45,9 @@ export const Review = () => {
     <div>
       <div className='review-container' id='review-container'>
         <div className='top-review'>
-          <h1>Review &amp; Edit Picks</h1>
+          <h1>Review Picks</h1>
         </div>
-        <div className='direction'>
-          <h3>Drag teams to make changes</h3>
-        </div>
-        <div className='picks-container'>
+        <div className='picks-container' id='picks-container'>
           <div className='seeds'>
             <div className='seed-num'>1</div>
             <div className='seed-num'>2</div>
@@ -60,16 +78,8 @@ export const Review = () => {
             <div className='seed-num'>7</div>
             <div className='seed-num'>8</div>
           </div>
-          <div className='wc-review' id='wc-review'>
-            {/* {globalContext.westPicksFill.map((i, index) => (
-              <div className={i.className}></div>
-            ))} */}
-          </div>
-          <div className='ec-review' id='ec-review'>
-            {/* {globalContext.eastPicksFill.map((i, index) => (
-              <div className={i.className}></div>
-            ))} */}
-          </div>
+          <div className='wc-review' id='wc-review'></div>
+          <div className='ec-review' id='ec-review'></div>
         </div>
         <div onClick={() => toggle(!state)}>
           <animated.input
@@ -94,4 +104,6 @@ export const Review = () => {
 };
 export default Review;
 
-// index.js:1 Warning: Each child in a list should have a unique "key" prop.
+// ADJUST MOBILE
+// MAGIC NOT WORKING
+// FINISHING SUBMIT

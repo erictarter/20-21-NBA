@@ -2,6 +2,7 @@
 import React, { useState, useContext } from 'react';
 import { Context } from './context/Context';
 import { useSpring, animated } from 'react-spring';
+import SpringList from 'react-spring-dnd';
 
 const calc = (x, y) => [
   -(y - window.innerHeight / 2) / 20,
