@@ -690,6 +690,10 @@ body {
 }
 
 @media (max-width: 600px) {
+  .empty {
+    display: none;
+  }
+
   .wc-top {
     width: 90%;
     flex-direction: column;
@@ -740,5 +744,21 @@ body {
     text-align: center;
     top: 54.4%;
     border-radius: 5px;
+  }
+
+  .year {
+    font-size: 1.4rem;
+  }
+  .part-3 {
+    font-size: 1.4rem;
+  }
+
+  .nba-logo {
+    width: 12rem;
+    height: 15rem;
+  }
+
+  .empty {
+    display: none;
   }
 }
