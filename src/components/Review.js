@@ -34,7 +34,7 @@ export const Review = () => {
   const editPicks = () => {};
 
   const submit = e => {
-    complete.submit();
+    document.getElementById('sub').submit();
   };
 
   const clickSubmit = () => {
@@ -82,7 +82,7 @@ export const Review = () => {
           <div className='wc-review' id='wc-review'></div>
           <div className='ec-review' id='ec-review'></div>
         </div>
-        <div className='form'>
+        <div className='form' id='sub'>
           <input type='hidden' name='form-name' value='name_of_my_form' />
           <input type='hidden' name='username' value={globalContext.userName} />
           <input type='hidden' name='wc' value={globalContext.westPicks} />
