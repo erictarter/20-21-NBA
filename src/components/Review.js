@@ -34,7 +34,7 @@ export const Review = () => {
   const editPicks = () => {};
 
   const submit = e => {
-    document.getElementById('sub').submit();
+    // document.getElementById('sub').submit();
   };
 
   const clickSubmit = () => {
@@ -84,6 +84,9 @@ export const Review = () => {
         </div>
 
         <form name='contact' method='POST' data-netlify='true'>
+          <p>
+            <input type='text' id='name' value={globalContext.userName} />
+          </p>
           <button type='submit'>
             <div onClick={() => toggle(!state)}>
               <animated.input
