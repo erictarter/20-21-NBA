@@ -39,6 +39,7 @@ export const Review = () => {
 
   const clickSubmit = () => {
     console.log(globalContext);
+    document.getElementById('review-container').classList.add('clear');
   };
 
   return (
@@ -81,22 +82,28 @@ export const Review = () => {
           <div className='wc-review' id='wc-review'></div>
           <div className='ec-review' id='ec-review'></div>
         </div>
-        <div onClick={() => toggle(!state)}>
-          <animated.input
-            onClick={clickSubmit}
-            onSubmit={submit}
-            type='submit'
-            className='submit-btn'
-            style={{
-              //   opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
-              transform: x
-                .interpolate({
-                  range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
-                  output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
-                })
-                .interpolate(x => `scale(${x})`)
-            }}
-          />
+        <div className='form'>
+          <input type='hidden' name='form-name' value='name_of_my_form' />
+          <input type='hidden' name='username' value={globalContext.userName} />
+          <input type='hidden' name='wc' value={globalContext.westPicks} />
+          <input type='hidden' name='ec' value={globalContext.eastPicks} />
+          <div onClick={() => toggle(!state)}>
+            <animated.input
+              onClick={clickSubmit}
+              onSubmit={submit}
+              type='submit'
+              className='submit-btn'
+              style={{
+                //   opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+                transform: x
+                  .interpolate({
+                    range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                    output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                  })
+                  .interpolate(x => `scale(${x})`)
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -104,6 +111,5 @@ export const Review = () => {
 };
 export default Review;
 
-// ADJUST MOBILE
-// MAGIC NOT WORKING
-// FINISHING SUBMIT
+// FORM SUBMISSION
+// THANK YOU COMP
