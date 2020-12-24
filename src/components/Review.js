@@ -82,8 +82,7 @@ export const Review = () => {
           <div className='wc-review' id='wc-review'></div>
           <div className='ec-review' id='ec-review'></div>
         </div>
-        <div className='form' id='sub'>
-          <input type='hidden' name='form-name' value='name_of_my_form' />
+        <form name='contact' method='POST' data-netlify='true'>
           <input type='hidden' name='username' value={globalContext.userName} />
           <input type='hidden' name='wc' value={globalContext.westPicks} />
           <input type='hidden' name='ec' value={globalContext.eastPicks} />
@@ -104,7 +103,7 @@ export const Review = () => {
               }}
             />
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );
