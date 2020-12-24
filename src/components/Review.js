@@ -35,9 +35,17 @@ export const Review = () => {
     let un = document.getElementById('username');
     let wcSub = document.getElementById('wc-sub');
     let ecSub = document.getElementById('ec-sub');
+    let formatWc = globalContext.westPicks.map(
+      (i, index) => index + 1 + '-' + i
+    );
+    let formatEc = globalContext.eastPicks.map(
+      (i, index) => index + 1 + '-' + i
+    );
+    console.log(formatEc);
+    console.log(formatWc);
     un.value = globalContext.userName;
-    wcSub.value = globalContext.westPicks;
-    ecSub.value = globalContext.eastPicks;
+    wcSub.value = formatWc;
+    ecSub.value = formatEc;
   };
 
   return (
@@ -141,5 +149,4 @@ export const Review = () => {
 };
 export default Review;
 
-// FORM SUBMISSION
-// THANK YOU COMP
+// FORMAT TEAMS
