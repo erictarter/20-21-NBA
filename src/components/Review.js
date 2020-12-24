@@ -36,10 +36,10 @@ export const Review = () => {
     let wcSub = document.getElementById('wc-sub');
     let ecSub = document.getElementById('ec-sub');
     let formatWc = globalContext.westPicks.map(
-      (i, index) => index + 1 + '-' + i
+      (i, index) => 8 - index + 1 + '-' + i
     );
     let formatEc = globalContext.eastPicks.map(
-      (i, index) => index + 1 + '-' + i
+      (i, index) => 8 - index + '-' + i
     );
     console.log(formatEc);
     console.log(formatWc);
