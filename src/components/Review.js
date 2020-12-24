@@ -107,15 +107,9 @@ export const Review = () => {
             </div>
           </button>
         </form> */}
-        <form name='contact' method='POST' data-netlify='true'>
-          <p>
-            <label>
-              Your Name: <input type='text' name='name' />
-            </label>
-          </p>
-          <p>
-            <button type='submit'>Send</button>
-          </p>
+        <form name='submit' method='POST' data-netlify='true'>
+          <input name='name' type='text' value={globalContext.name} />
+          <input type='submit' />
         </form>
       </div>
     </div>
