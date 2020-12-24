@@ -83,8 +83,15 @@ export const Review = () => {
           <div className='ec-review' id='ec-review'></div>
         </div>
 
-        <form name='contact' method='POST' data-netlify='true'>
-          <input type='text' id='name' value={globalContext.userName} />
+        {/* <form name='contact' method='POST' netlify netlify-honeypot='bot-field'>
+          <input
+            type='text'
+            id='name'
+            value={globalContext.userName}
+            onChange={e => {
+              globalContext.userName = e.target.value;
+            }}
+          />
           <button type='submit'>
             <div onClick={() => toggle(!state)}>
               <animated.input
@@ -101,10 +108,20 @@ export const Review = () => {
                     })
                     .interpolate(x => `scale(${x})`)
                 }}
-                Submit
+                submit
               />
             </div>
           </button>
+        </form> */}
+        <form name='contact' method='post'>
+          <p>
+            <label>
+              Your Name: <input type='text' name='name' />
+            </label>
+          </p>
+          <p>
+            <button type='submit'>Send</button>
+          </p>
         </form>
       </div>
     </div>
