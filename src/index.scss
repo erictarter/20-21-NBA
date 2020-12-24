@@ -658,8 +658,14 @@ body {
 .input-none {
   display: none;
 }
-.input {
-  display: hidden;
+#username {
+  display: none;
+}
+#wc-sub {
+  display: none;
+}
+form {
+  background: #333;
 }
 
 @keyframes clear-team {

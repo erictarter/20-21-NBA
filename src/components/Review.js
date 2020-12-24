@@ -31,15 +31,13 @@ export const Review = () => {
     config: { duration: 1000 }
   });
 
-  const editPicks = () => {};
-
-  const submit = e => {
-    // document.getElementById('sub').submit();
-  };
-
-  const clickSubmit = () => {
-    console.log(globalContext);
-    document.getElementById('review-container').classList.add('clear');
+  const updateVals = () => {
+    let un = document.getElementById('username');
+    let wcSub = document.getElementById('wc-sub');
+    un.value = globalContext.userName;
+    wcSub.value = globalContext.westPicks;
+    console.log(un);
+    console.log(wcSub);
   };
 
   return (
@@ -115,9 +113,26 @@ export const Review = () => {
         </form> */}
         <form name='contact' method='post'>
           <input type='hidden' name='form-name' value='contact' />
-          <input type='text' name='name' value={globalContext.userName} />
-          <input type='text' name='wc' value={globalContext.westPicks} />
-          <button type='submit'>Send</button>
+          <input id='username' type='text' name='name' />
+          <input id='wc-sub' type='text' name='wc' />
+          <button type='submit' onMouseEnter={updateVals}>
+            <div onClick={() => toggle(!state)}>
+              <animated.input
+                type='submit'
+                className='submit-btn'
+                style={{
+                  //   opacity: x.interpolate({ range: [0, 1], output: [0.3, 1] }),
+                  transform: x
+                    .interpolate({
+                      range: [0, 0.25, 0.35, 0.45, 0.55, 0.65, 0.75, 1],
+                      output: [1, 0.97, 0.9, 1.1, 0.9, 1.1, 1.03, 1]
+                    })
+                    .interpolate(x => `scale(${x})`)
+                }}
+                submit
+              />
+            </div>
+          </button>
         </form>
       </div>
     </div>
