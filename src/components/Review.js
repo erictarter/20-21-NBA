@@ -34,10 +34,10 @@ export const Review = () => {
   const updateVals = () => {
     let un = document.getElementById('username');
     let wcSub = document.getElementById('wc-sub');
+    let ecSub = document.getElementById('ec-sub');
     un.value = globalContext.userName;
     wcSub.value = globalContext.westPicks;
-    console.log(un);
-    console.log(wcSub);
+    ecSub.value = globalContext.eastPicks;
   };
 
   return (
@@ -115,7 +115,8 @@ export const Review = () => {
           <input type='hidden' name='form-name' value='contact' />
           <input id='username' type='text' name='name' />
           <input id='wc-sub' type='text' name='wc' />
-          <button type='submit' onMouseEnter={updateVals}>
+          <input id='ec-sub' type='text' name='ec' />
+          <button id='sub-btn' type='submit' onMouseEnter={updateVals}>
             <div onClick={() => toggle(!state)}>
               <animated.input
                 type='submit'

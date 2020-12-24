@@ -645,6 +645,10 @@ body {
   -moz-appearance: none;
   appearance: none;
 }
+#sub-btn {
+  background: #333;
+  border: none;
+}
 
 .submit-btn:focus {
   outline: none;
@@ -662,6 +666,9 @@ body {
   display: none;
 }
 #wc-sub {
+  display: none;
+}
+#ec-sub {
   display: none;
 }
 form {
