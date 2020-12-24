@@ -34,7 +34,7 @@ export const Review = () => {
   const editPicks = () => {};
 
   const submit = e => {
-    e.preventDefault();
+    complete.submit();
   };
 
   const clickSubmit = () => {
