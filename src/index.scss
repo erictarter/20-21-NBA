@@ -658,6 +658,9 @@ body {
 .input-none {
   display: none;
 }
+.input {
+  display: hidden;
+}
 
 @keyframes clear-team {
   0% {

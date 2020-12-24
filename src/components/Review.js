@@ -115,24 +115,9 @@ export const Review = () => {
         </form> */}
         <form name='contact' method='post'>
           <input type='hidden' name='form-name' value='contact' />
-          <p>
-            <label>
-              Your Name: <input type='text' name='name' />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type='email' name='email' />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name='message'></textarea>
-            </label>
-          </p>
-          <p>
-            <button type='submit'>Send</button>
-          </p>
+          <input type='text' name='name' value={globalContext.userName} />
+          <input type='text' name='wc' value={globalContext.westPicks} />
+          <button type='submit'>Send</button>
         </form>
       </div>
     </div>
