@@ -641,6 +641,9 @@ body {
   border: none;
   border-radius: 5px;
   margin-top: 2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .submit-btn:focus {
