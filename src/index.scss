@@ -408,7 +408,7 @@ body {
   background: url('http://loodibee.com/wp-content/uploads/nba-orlando-magic-logo-480x480.png')
     no-repeat center center/cover;
 }
-.magic {
+.magic.clear {
   animation: clear-team 0.5s forwards;
 }
 
@@ -655,11 +655,14 @@ body {
 
 @keyframes clear-team {
   0% {
-    transform: scale(1);
+    // transform: scale(1);
+    opacity: 1;
   }
   100% {
-    transform: scale(0);
-    visibility: hidden;
+    opacity: 0.5;
+    border-color: #333;
+    // transform: scale(0.6);
+    // visibility: hidden;
   }
 }
 

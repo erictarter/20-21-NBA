@@ -30,14 +30,14 @@ export const PickWC = () => {
   }));
 
   const addWcTeam = e => {
-    if (wcTeams.length < 8) {
+    if (wcTeams.length < 8 && !e.target.classList.contains('clear')) {
       wcTeams.push(e.target.id.split(' ')[0]);
       document.getElementById('pick-num').innerText = `Pick #${8 -
         wcTeams.length} Seed`;
       e.target.classList.add('clear');
 
       setTimeout(() => {
-        e.target.style.display = 'none';
+        e.target.style.background = '';
       }, 500);
       if (wcTeams.length === 8) {
         document.querySelector('.east-btn').classList.add('show');

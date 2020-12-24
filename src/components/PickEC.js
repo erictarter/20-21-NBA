@@ -30,7 +30,7 @@ export const PickEC = () => {
   }));
 
   const addWcTeam = e => {
-    if (ecTeams.length < 8) {
+    if (ecTeams.length < 8 && !e.target.classList.contains('clear')) {
       ecTeams.push(e.target.id.split(' ')[0]);
       document.getElementById('pick-num-2').innerText = `Pick #${8 -
         ecTeams.length} Seed`;
